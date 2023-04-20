@@ -1,0 +1,4 @@
+siren:
+  launch: "<b>Start: </b>"
+  button: "Update list 🔄"
+  lastupd: "Last update: "
