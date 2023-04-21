@@ -1,6 +1,6 @@
 info:
   name: UASiren
   author: IVM-USER
-  version: 0.0.1
+  version: 0.0.2
   description: The usual module that shows a list of air alarms in Ukraine for PbModular
   src_url: https://github.com/IVM-USER/UASiren
