@@ -20,8 +20,8 @@ class UASiren(BaseModule):
         for item in siren:
             start_time = datetime.datetime.fromisoformat(item['start'][:-6]) + datetime.timedelta(hours=3)
             start_time_str = start_time.strftime("%Y-%m-%d %H:%M:%S")
-            string += f"🛑 <b>{item['district']}</b>\n       {startsiren} <code>{start_time_str}</code>\n"
-
+            district = item['district'].replace("_", " ")
+            string += f"🛑 <b>{district}</b>\n       {startsiren} <code>{start_time_str}</code>\n"
         keyboard = InlineKeyboardMarkup(
             [
                 [
@@ -50,7 +50,8 @@ class UASiren(BaseModule):
         for item in siren:
             start_time = datetime.datetime.fromisoformat(item['start'][:-6]) + datetime.timedelta(hours=3)
             start_time_str = start_time.strftime("%Y-%m-%d %H:%M:%S")
-            string += f"🛑 <b>{item['district']}</b>\n       {startsiren} <code>{start_time_str}</code>\n"
+            district = item['district'].replace("_", " ")
+            string += f"🛑 <b>{district}</b>\n       {startsiren} <code>{start_time_str}</code>\n"
 
 
         last_update_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
